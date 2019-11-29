@@ -14,15 +14,20 @@ html, body {
 }
 
 #backgroundImage {
-    background-image: url("../images/m82.jpg");
+    background-image: url("../images/croppedM82.jpg");
     background-size: cover;
     /*Allows us to vertically center header*/
     display: table;
 }
 
 #header {
+    font-size: 60px;
     color: white;
     text-align: center;
     display: table-cell;
     vertical-align: middle;
+}
+
+.extraSpacing {
+    height: 20%;
 }
