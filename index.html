@@ -3,47 +3,60 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
         <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
         <!-- Stylesheet -->
         <link rel="stylesheet" type="text/css" href="public/css/generalStyle.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>William Gilmore</title>
+
+        <title>Briana Indahl</title>
     </head>
     <body>
-        <div class="container-fluid fullHeight">
-            <!-- Front page section -->
-            <div class="fullHeight row">
-                <div id="backgroundImage" class="fullHeight col-md-12">
-                    <h1 id="header">Briana Indahl</h1>
-                </div>
+        <nav id="pageNavbar" class="navbar navbar-expand-lg homeBackground">
+            <div class="navbar navbar-collapse">
+                <ul class="navbar-nav">
+                    <!-- Items in the navbar need to have the data-section
+                        value that matches their section id-->
+                    <li class="navItem nav-item" data-section="home">
+                        <a id="linkHome" class="nav-link">Home</a>
+                    </li>
+                    <li class="navItem nav-item" data-section="papers">
+                        <a id="linkPaper" class="nav-link">Papers</a>
+                    </li>
+                </ul>
             </div>
-            <!-- Body -->
-            <div class="fullHeight row">
-                <div class="fullHeight col-md-8 col-md-offset-2">
-                    <div class="extraSpacing"></div>
-                    <h1>Header</h1>
-                    <div>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </nav>
+
+        <!-- Home page -->
+        <div id="home" class="pageSection fullHeight fullWidth" >
+            <div class="homeBackground fullHeight fullWidth">
+                <div id="header">
+                    <h1 class="headerName">Dr. Briana Indahl</h1>
+                    <div class="col-md-2 offset-md-5">
+                        <hr class="headerDivider" />
                     </div>
-                    <a href="./public/pdf/Resume.pdf" class="btn btn-primary" target="_blank" download>Download CV</a>
-                </div>
-            </div>
-            <!-- Contacts -->
-            <div class="contactBackground">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 text-center noWrap">
-                        <h4 class="contactText">
-                            <a href="mailto:briana.lane246@gmail.com" target="_blank" rel="noopener noreferrer">Email</a> •
-                            <a href="https://www.linkedin.com/in/briana-indahl-4505a6105/" target="_blank" rel="noopener noreferrer">Linkedin</a> •
-                            <a href="https://github.com/BrianaLane" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </h4>
-                    </div>
+                    <h3>Space Marine</h3>
                 </div>
             </div>
         </div>
+
+        <!-- Paper page -->
+        <div id="papers" class="pageSection hidden">
+            <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Indahl%2C%20Briana%22&sort=date%20desc%2C%20bibcode%20desc&p_=0">Papers</a>
+        </div>
+        <script type="text/javascript">
+            jQuery(function () {
+                jQuery(".navItem").on("click", function () {
+                    jQuery(".pageSection").addClass("hidden");
+                    jQuery(`#${jQuery(this).data("section")}`).removeClass("hidden");
+                })
+            })
+        </script>
     </body>
 </html>

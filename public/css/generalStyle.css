@@ -3,6 +3,10 @@ html, body {
     margin: 0px;
 }
 
+.hidden {
+    display: none;
+}
+
 @font-face {
     font-family: 'Abel-Regular';
     src: url('./font/Abel-Regular.eot');
@@ -13,7 +17,18 @@ html, body {
     height: 100%;
 }
 
-#backgroundImage {
+.fullWidth {
+    width: 100%;
+}
+
+#pageNavbar {
+    position: fixed;
+    width: 100%;
+    color: white;
+    height: 1vh;
+}
+
+.homeBackground {
     background-image: url("../images/croppedM82.jpg");
     background-size: cover;
     /*Allows us to vertically center header*/
@@ -21,11 +36,19 @@ html, body {
 }
 
 #header {
-    font-size: 60px;
     color: white;
     text-align: center;
     display: table-cell;
     vertical-align: middle;
+    padding-bottom: 45px;
+}
+
+.headerName {
+    font-size: 60px;
+}
+
+.headerDivider {
+    background: white;
 }
 
 .extraSpacing {
