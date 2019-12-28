@@ -22,16 +22,27 @@ html, body {
 }
 
 #pageNavbar {
-    position: fixed;
     width: 100%;
     color: white;
-    height: 1vh;
 }
 
 .homeBackground {
     background-image: url("../images/croppedM82.jpg");
     background-size: cover;
-    /*Allows us to vertically center header*/
+}
+
+.backgroundShift {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.table {
+    display: table;
+    margin-bottom: 0;
+}
+
+#headerContainer {
     display: table;
 }
 

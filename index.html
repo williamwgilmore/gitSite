@@ -18,38 +18,41 @@
         <title>Briana Indahl</title>
     </head>
     <body>
-        <nav id="pageNavbar" class="navbar navbar-expand-lg homeBackground">
-            <div class="navbar navbar-collapse">
-                <ul class="navbar-nav">
-                    <!-- Items in the navbar need to have the data-section
-                        value that matches their section id-->
-                    <li class="navItem nav-item" data-section="home">
-                        <a id="linkHome" class="nav-link">Home</a>
-                    </li>
-                    <li class="navItem nav-item" data-section="papers">
-                        <a id="linkPaper" class="nav-link">Papers</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div class="fullHeight fullWidth">
+            <nav id="pageNavbar" class="navbar navbar-expand-lg homeBackground">
+                <div class="navbar navbar-collapse">
+                    <ul class="navbar-nav">
+                        <!-- Items in the navbar need to have the data-section
+                            value that matches their section id-->
+                        <li class="navItem nav-item" data-section="home">
+                            <a id="linkHome" class="nav-link">Home</a>
+                        </li>
+                        <li class="navItem nav-item" data-section="papers">
+                            <a id="linkPaper" class="nav-link">Papers</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-        <!-- Home page -->
-        <div id="home" class="pageSection fullHeight fullWidth" >
-            <div class="homeBackground fullHeight fullWidth">
-                <div id="header">
-                    <h1 class="headerName">Dr. Briana Indahl</h1>
-                    <div class="col-md-2 offset-md-5">
-                        <hr class="headerDivider" />
+            <!-- Home page -->
+            <div id="home" class="pageSection fullHeight fullWidth backgroundShift">
+                <div class="fullHeight fullWidth homeBackground table">
+                    <div id="header">
+                        <h1 class="headerName">Dr. Briana Indahl</h1>
+                        <div class="col-md-2 offset-md-5">
+                            <hr class="headerDivider" />
+                        </div>
+                        <h3>Space Marine</h3>
                     </div>
-                    <h3>Space Marine</h3>
                 </div>
             </div>
+
+            <!-- Paper page -->
+            <div id="papers" class="pageSection hidden">
+                <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Indahl%2C%20Briana%22&sort=date%20desc%2C%20bibcode%20desc&p_=0">Papers</a>
+            </div>
         </div>
 
-        <!-- Paper page -->
-        <div id="papers" class="pageSection hidden">
-            <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Indahl%2C%20Briana%22&sort=date%20desc%2C%20bibcode%20desc&p_=0">Papers</a>
-        </div>
         <script type="text/javascript">
             jQuery(function () {
                 jQuery(".navItem").on("click", function () {
