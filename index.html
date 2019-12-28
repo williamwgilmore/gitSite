@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -19,22 +19,26 @@
     </head>
     <body>
         <div class="fullHeight fullWidth">
+            <!-- Navbar -->
             <nav id="pageNavbar" class="navbar navbar-expand-lg homeBackground">
                 <div class="navbar navbar-collapse">
                     <ul class="navbar-nav">
                         <!-- Items in the navbar need to have the data-section
-                            value that matches their section id-->
+                    value that matches their section id-->
                         <li class="navItem nav-item" data-section="home">
                             <a id="linkHome" class="nav-link">Home</a>
                         </li>
                         <li class="navItem nav-item" data-section="papers">
                             <a id="linkPaper" class="nav-link">Papers</a>
                         </li>
+                        <li class="navItem nav-item" data-section="blog">
+                            <a id="linkBlog" class="nav-link">Blog</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
 
-            <!-- Home page -->
+            <!-- Home Page -->
             <div id="home" class="pageSection fullHeight fullWidth backgroundShift">
                 <div class="fullHeight fullWidth homeBackground table">
                     <div id="header">
@@ -47,10 +51,17 @@
                 </div>
             </div>
 
-            <!-- Paper page -->
+            <!-- Paper Page -->
             <div id="papers" class="pageSection hidden">
                 <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Indahl%2C%20Briana%22&sort=date%20desc%2C%20bibcode%20desc&p_=0">Papers</a>
             </div>
+
+            <!-- Blog Page -->
+            <div id="blog" class="pageSection hidden">
+                <h1>blog</h1>
+            </div>
+
+            <!-- End Page -->
         </div>
 
         <script type="text/javascript">
@@ -59,6 +70,10 @@
                     jQuery(".pageSection").addClass("hidden");
                     jQuery(`#${jQuery(this).data("section")}`).removeClass("hidden");
                 })
+
+                jQuery.get('blog/blog.txt', function(data) {
+                    console.log(data);
+                });
             })
         </script>
     </body>

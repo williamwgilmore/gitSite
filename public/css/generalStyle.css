@@ -28,6 +28,10 @@ html, body {
     color: white;
 }
 
+.nav-item {
+    cursor: pointer;
+}
+
 /* Home */
 .homeBackground {
     background-image: url("../images/croppedM82.jpg");
