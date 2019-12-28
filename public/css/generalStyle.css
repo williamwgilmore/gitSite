@@ -8,6 +8,10 @@ html, body {
     display: none;
 }
 
+.inlineBlock {
+    display: inline-block;
+}
+
 @font-face {
     font-family: 'Abel-Regular';
     src: url('./font/Abel-Regular.eot');
@@ -30,6 +34,7 @@ html, body {
 
 .nav-item {
     cursor: pointer;
+    display: inline-block;
 }
 
 /* Home */
