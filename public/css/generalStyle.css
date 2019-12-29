@@ -26,6 +26,10 @@ html, body {
     width: 100%;
 }
 
+.arrow {
+    cursor: context-menu;
+}
+
 /* Navbar */
 #pageNavbar {
     width: 100%;
