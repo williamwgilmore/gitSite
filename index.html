@@ -62,7 +62,7 @@
 
             <!-- Blog Page -->
             <div id="blog" class="pageSection hidden">
-                <h1>blog</h1>
+                <div id="blogSection">blog</div>
             </div>
 
             <!-- End Page -->
@@ -76,7 +76,13 @@
                 })
 
                 jQuery.get('public/blog/blog.txt', function(data) {
-                    console.log(data);
+                    data.foreach(blog =>
+                        jQuery("#blogSection").Append(
+                            `<div><div>${blog.title}</div><div>${blog.text}</div></div>`
+                          )
+                        )
+                    console.log(json.deserialize(data));
+                    console.log('end');
                 });
             })
         </script>

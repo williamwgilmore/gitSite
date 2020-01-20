@@ -1,11 +1,10 @@
-{
-  "posts": [
-    {
-      "title": "Pipeline development",
-      "text": "Developed a pipeline to interpret data"
-    },
-    {
-      "title": "Confrence presentation",
-      "text": "Presented a poster about work at conference"
-    },
-}
+[
+  {
+    "title": "1",
+    "text": "hello"
+  },
+  {
+    "title": "2",
+    "text": "yellow"
+  }
+]
