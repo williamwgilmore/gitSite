@@ -77,7 +77,7 @@
 
                 jQuery.get('public/blog/blog.txt', function(data) {
                     data.forEach(blog =>
-                        jQuery("#blogSection").Append(
+                        jQuery("#blogSection").append(
                             `<div><div>${blog.title}</div><div>${blog.text}</div></div>`
                           )
                         )
