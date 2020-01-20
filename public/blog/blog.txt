@@ -1,3 +1,11 @@
-hello there friend
-there
-friend
+{
+  "posts": [
+    {
+      "title": "Pipeline development",
+      "text": "Developed a pipeline to interpret data"
+    },
+    {
+      "title": "Confrence presentation",
+      "text": "Presented a poster about work at conference"
+    },
+}
