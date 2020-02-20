@@ -1,4 +1,4 @@
-[
+{
   {
     "title": "1",
     "text": "hello"
@@ -7,4 +7,4 @@
     "title": "2",
     "text": "yellow"
   }
-]
+}
