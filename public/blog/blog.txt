@@ -1,10 +1,10 @@
 {
-  {
-    "title": "1",
-    "text": "hello"
-  },
-  {
-    "title": "2",
-    "text": "yellow"
-  }
+	"0": {
+		"title": "1",
+		"text": "hello"
+	},
+	"1": {
+		"title": "2",
+		"text": "yellow"
+	}
 }
